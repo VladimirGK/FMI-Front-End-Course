@@ -1,0 +1,83 @@
+<script>
+    var dates = [];
+
+    var today = new Date();
+
+    //console.log(today);
+
+    dates.push(today);
+
+    var newDate = new Date();
+
+    newDate.setDate(8);
+    newDate.setMonth(11);
+    newDate.setFullYear(2018);
+    newDate.setHours(21);
+    newDate.setMinutes(00);
+    newDate.setSeconds(00);
+
+    //console.log(newDate);
+
+    dates.push(newDate);
+
+    console.log(dates[0]);
+    console.log(dates[1]);
+
+    var A = [];
+    for (var i = 0; i < dates.length; i ++) {
+        let B = [];
+
+        let month = dates[i].getMonth() + 1;
+        let year = dates[i].getFullYear();
+        let day = dates[i].getDay();
+
+        let daysInAMonth;
+
+        if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+            daysInAMonth = 31;
+        }
+        else if (month == 2 ) {
+            if (year % 4 == 0) {
+                daysInAMonth = 29;
+            }
+            else daysInAMonth = 28;
+        }
+        else daysInAMonth = 30;
+
+        B.push(day);
+        B.push(daysInAMonth);
+        A.push(B);
+    }
+    //console.log(A[0]);
+    //console.log(A[1]);
+
+    var C = [];
+    for (var i = 0; i < dates.length; i++) {
+        let daysInAMonth = A[i][1];
+        
+        let day;
+        switch (A[i][0]) {
+            case 0:
+                day = "неделя"; break;
+            case 1:
+                day = "понеделник"; break;
+            case 2:
+                day = "вторник"; break;
+            case 3:
+                day = "сряда"; break;
+            case 4:
+                day = "четвъртък"; break;
+            case 5:
+                day = "петък"; break;
+            case 6:
+                day = "събота";
+        }
+
+        C.push("Дата: " + dates[i].getDate() + "." + (dates[i].getMonth() + 1) + "." + dates[i].getFullYear() + ", " +
+            "час: " + dates[i].getHours() + ":" + dates[i].getMinutes() + ":" + dates[i].getSeconds() + ", " + day + ", " +
+            daysInAMonth + " дни");
+
+    }
+    console.log(C[0]);
+    console.log(C[1]);
+</script>

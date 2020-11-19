@@ -1,0 +1,64 @@
+<script>
+    var A = [10, 5, 13, 18, 51];
+
+    A.forEach(function (item, index, A) {
+        console.log(item);
+    });
+
+    console.log("\n");
+
+    var B = A.slice();
+
+    B.forEach(function (item, index, B) {
+        item*=2;
+        console.log(item);
+    });
+
+    console.log("\n");
+
+    function isEven (value) {
+        return value % 2 == 0;
+    }
+
+    var filtered = A.filter(isEven);
+
+    filtered.forEach(function (item, index, filtered) {
+        console.log(item);
+    });
+    
+    console.log("\n");
+
+    var lessThan = false;
+    A.forEach(function (item, index, A) {
+        if(item < 10){
+            lessThan = true;
+        }
+    });
+
+    console.log(lessThan);
+
+    console.log("\n");
+
+    function divisibleBy3 (value) {
+        return value % 3 == 0;
+    }
+
+    var filtered1 = A.filter(divisibleBy3);
+
+    filtered1.forEach(function (item, index, filtered1) {
+        console.log(item);
+    });
+
+    console.log("\n");
+
+    var reducer = (accumulator, currentValue) => accumulator + currentValue;
+    console.log(A.reduce(reducer));
+
+    console.log("\n");
+
+    var C = A.slice(3);
+    C.forEach(function (item, index, C) {
+        console.log(item);
+    });
+
+</script>
