@@ -1,0 +1,56 @@
+<script>
+
+    class PaymentMethod {
+        getAmount() {
+            return "Your amount in the account is: ";
+        }
+    }
+
+    class CreditMethod extends PaymentMethod {
+        constructor() {
+            super();
+            var amount = 0;
+            this.addToAmount = function(amountToAdd) {
+                amount+=amountToAdd * 0.9;
+                return this;
+            }
+            this.reduceFromAmount = function(amountToReduce) {
+                amount-=amountToReduce;
+                return this;
+            }
+            this.getAmount = function () {
+                console.log(`${PaymentMethod.prototype.getAmount()} ${amount}`);
+            }
+        }
+    }
+
+    class CashMethod extends PaymentMethod {
+        constructor() {
+            super();
+            var amount = 0;
+            this.addToAmount = function(amountToAdd) {
+                amount+=amountToAdd;
+                return this;
+            }
+            this.reduceFromAmount = function(amountToReduce) {
+                amount-=amountToReduce;
+                return this;
+            }
+            this.getAmount = function () {
+                console.log(`${PaymentMethod.prototype.getAmount()} ${amount}`);
+            }
+        }
+
+    }
+
+    let creditAccount = new CreditMethod();
+    let cashAccount = new CashMethod();
+
+    creditAccount.addToAmount(100);
+    creditAccount.getAmount();
+
+    cashAccount.getAmount();
+    cashAccount.addToAmount(100);
+    cashAccount.addToAmount(20).addToAmount(30).reduceFromAmount(10);
+    cashAccount.getAmount();
+</script>

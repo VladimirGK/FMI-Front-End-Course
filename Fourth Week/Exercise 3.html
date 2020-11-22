@@ -1,0 +1,17 @@
+<script>
+    class Item {
+        constructor(name, discount) {
+            this.name = name;
+            this.discount = discount;
+        }
+        get
+    }
+    Item.prototype.basePrice = function() {
+        return 1000;
+    };
+    var item = new Item("Apple", 0.20);
+    item.getPrice = function() {
+        return Item.prototype.basePrice() - Item.prototype.basePrice() * this.discount;
+    }
+    console.log(item.getPrice());
+</script>

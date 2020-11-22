@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <style>
+            table, td {
+              border: 1px solid black;
+            }
+            </style>
+    </head>
+    <body>
+        <table id="my_table">
+            
+            </table>
+          <button onclick="changeLines();"> Change Lines</button>
+    </body>
+    <script>
+        let data_ = [
+  { EvidenceRating: "A", Effect: "Power Output", Efficacy: "3 Stars", Consensus: "80% 18 studies", Comments: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book" },
+  { EvidenceRating: "B", Effect: "Weight", Efficacy: "4 Stars", Consensus: "100% 65 studies" , Comments: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."},
+];
+
+function generateCaption() {
+    let caption = document.createElement('caption');
+    let captionText = document.createTextNode('Table caption');
+    caption.appendChild(captionText);
+    return caption;
+}
+
+function generateTableHead(table, data) {
+  let thead = table.createTHead();
+  let row = thead.insertRow();
+  for (let key of data) {
+    let th = document.createElement("th");
+    let text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
+  }
+}
+
+function generateTable(table, data) {
+  for (let element of data) {
+    let row = table.insertRow();
+    for (key in element) {
+      let cell = row.insertCell();
+      let text = document.createTextNode(element[key]);
+      cell.appendChild(text);
+    }
+  }
+}
+
+let table = document.querySelector("table");
+let data = Object.keys(data_[0]);
+table.appendChild(generateCaption());
+generateTableHead(table, data);
+generateTable(table, data_);
+
+let data_second = [
+{ EvidenceRating: "B", Effect: "Weight", Efficacy: "4 Stars", Consensus: "100% 65 studies" , Comments: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."},
+  { EvidenceRating: "A", Effect: "Power Output", Efficacy: "3 Stars", Consensus: "80% 18 studies", Comments: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book" }
+];
+
+function changeLines() {
+  document.getElementById("my_table").remove();
+
+    let table_new = document.querySelector("table");
+    let data_new = Object.keys(data_second[0]);
+    generateTableHead(table_new, data_new);
+    generateTable(table_new, data_second);
+}
+</script>
+</html>
