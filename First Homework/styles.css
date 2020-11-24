@@ -1,0 +1,366 @@
+@media (max-width: 890px) {
+    .feed-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feed {
+        margin: 0;
+        width: 90%;
+        max-width: 32rem;
+    }
+
+    .profile-info {
+        max-width: 32rem;
+    }
+
+    .profile-pic {
+        width: 5.25rem;
+        height: 5.25rem;
+    }
+
+    .posts-table-header, .reactions-table-header {
+        font-size: 0.75rem;
+    }
+
+    .posts-count, .reactions-count {
+        font-size: 1.125rem;
+    }
+
+    .profile-posts {
+        height: 3.75rem;
+    }
+
+    .post-prompt {
+        height: 3rem;
+    }
+
+    .post-entry {
+        min-height: 7rem;
+        font-size: 0.875rem;
+        padding: 1rem;
+    }
+}
+
+body {
+    background-image: linear-gradient(-100deg, #A2F2F1 0%, #B19AFE 100%);
+    font-size: 15px;
+    font-family: Helvetica, sans-serif;
+}
+
+
+h1 {
+    font-weight: 200;
+    color: rgba(33, 37, 34, 0.83);
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+h3 {
+    color: grey;
+    font-weight: 450;
+}
+
+.login-header, .register-header {
+    padding-bottom: 2rem;
+}
+
+.button-group {
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    max-width: 10rem;
+    color: white;
+    font-size: 1rem;
+
+    background-color: #54bdd6;
+    border: none;
+    border-radius: 1rem;
+
+    margin-bottom: 1.75rem;
+    margin-top: 2.25rem;
+    padding: 0.5rem 2.75rem;
+    cursor: pointer;
+}
+
+.anchor {
+    color: blue;
+    text-decoration: none;
+    text-align: center;
+}
+
+.logout-button {
+    color: #69ccdd;
+    font-weight: bold;
+    border: 1px solid #69ccdd;
+    border-radius: 1rem;
+    background-color: inherit;
+    padding: 0.5rem 0.5rem;
+    margin: 0.25rem 0.75rem 0 0;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.logout-button:focus {
+    outline: none;
+}
+
+.form-styles {
+    max-width: 32rem;
+    width: 90%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.form-styles-inner {
+    padding: 2.5rem;
+}
+
+
+.fieldset {
+    border: 0 none;
+    padding: 0;
+}
+
+.fieldset .form-input {
+    border: none;
+    border-bottom: 1px solid #e0e2f6;
+    display: block;
+    padding: 0 0 0.5rem 0;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.form-input:focus {
+    outline: none;
+    border-bottom-color: blue;
+}
+
+.feed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 5%;
+    background-color: white;
+}
+
+.search-field {
+    background-color: #f6f7fd;
+    border: 1px solid #c0e1ec;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    background-image: url("pictures/search_pic.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-origin: content-box;
+}
+
+.search-field:focus {
+    outline: none;
+}
+
+.feed-content {
+    margin: 0;
+}
+
+.feed-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-info {
+    background-color: white;
+    width: 90%;
+    max-width: 16rem;
+    margin-top: 0.5rem;
+}
+
+.profile-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+}
+
+.profile-name {
+    text-align: center;
+    font-weight: 600;
+}
+
+.profile-posts {
+    background-color: #f6f7fd;
+    margin-bottom: 0;
+}
+
+.profile-posts-inner {
+    position: relative;
+    padding: 0.5rem;
+}
+
+.posts-table {
+    display: inline;
+}
+
+.posts-table-header, .reactions-table-header {
+    font-weight: 600;
+    color: grey;
+}
+
+.posts-count, .reactions-count {
+    font-weight: bold;
+    color: #69ccdd;
+}
+
+td {
+    padding: 0 0.5rem;
+}
+
+.like-button, .dislike-button {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.like-button {
+    background-image: url("pictures/like_pic.png");
+}
+
+.dislike-button {
+    background-image: url("pictures/dislike_pic.png");
+}
+
+.likes-count {
+    margin-right: 3rem;
+}
+
+.likes-dislikes-section {
+    margin-bottom: 1rem;
+}
+
+.feed {
+    margin-left: 0.5rem;
+    background-color: white;
+    width: 35%;
+    max-width: 55rem;
+    margin-top: 0.5rem;
+}
+
+.post-prompt {
+    background-color: #f3f9fd;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-pic-in-post-prompt {
+    max-width: 35px;
+    max-height: 37px;
+    margin: 0.5rem 1rem 0.5rem 2rem;
+}
+
+.post-prompt-form-input {
+    background-image: url("pictures/comment_pic.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-origin: content-box;
+    border: 1px solid #f3f8fd;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 25rem;
+    padding: 0.5rem;
+}
+
+.post-prompt-form-input:focus {
+    outline: none;
+}
+
+.post-prompt-form-input::-webkit-form-input-placeholder { /* Chrome/Opera/Safari */
+    color: #69ccdd;
+}
+
+.post-prompt-form-input::-moz-placeholder { /* Firefox 19+ */
+    color: #69ccdd;
+}
+
+.post-prompt-form-input:-ms-form-input-placeholder { /* IE 10+ */
+    color: #69ccdd;
+}
+
+.post-prompt-form-input:-moz-placeholder { /* Firefox 18- */
+    color: #69ccdd;
+}
+
+.post-prompt-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:  #69ccdd;
+    opacity: 1; /* Firefox */
+  }
+  
+.post-prompt-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:  #69ccdd;
+  }
+  
+.post-prompt-input ::-ms-input-placeholder { /* Microsoft Edge */
+    color:  #69ccdd;
+  }
+.post-entry {
+    position: relative;
+    display: flex;
+}
+
+.profile-pic-in-post-entry-container {
+    margin: 1rem 0.5rem 1rem 1.25rem;
+}
+
+.post-data-container {
+    margin-top: 1rem;
+}
+
+.profile-pic-in-post-entry {
+    max-width: 18rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.post-header {
+    margin: 0.25rem 0;
+}
+
+.post-author {
+    font-weight: bold;
+}
+
+.post-date {
+    color: grey;
+}
+
+.delete-post-anchor-container {
+    margin: 0.5rem;
+}
+
+.delete-post-anchor {
+    text-decoration: none;
+    color: grey;
+}
+
+.post-content {
+    margin: 0 0 1rem 0;
+}
+
+
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="feed-content">
+<header class="feed-header">
+    <h1>Flutter</h1>
+    <input type="search" class="search-field" placeholder="Search">
+</header>
+<main class="feed-container">
+    <aside class="profile-info">
+        <div class="profile-header">
+            <img src="pictures/profile_pic.png" class="profile-pic">
+            <p class="profile-name">Martin Hristov</p>
+        </div>
+        <div class="profile-posts">
+            <div class="profile-posts-inner">
+                <table class="posts-table">
+                    <tr>
+                        <th class="posts-table-header">Posts</th>
+                        <th class="reactions-table-header">Reactions</th>
+                    </tr>
+                    <tr>
+                        <td class="posts-count">1</td>
+                        <td class="reactions-count">7</td>
+                    </tr>
+                </table>
+                <button class="logout-button">Log Out</button>
+            </div>
+
+        </div>
+    </aside>
+
+    <section class="feed">
+        <div class="post-prompt">
+            <img src="pictures/profile_pic.png" class="profile-pic-in-post-prompt">
+            <input type="text" class="post-prompt-input" placeholder="Say something" >
+        </div>
+        <div class="post-list">
+            <div id="post1" class="post-entry">
+                <div class="profile-pic-in-post-entry-container">
+                    <img src="pictures/profile_pic.png"class="profile-pic-in-post-entry">
+                </div>
+                <div class="post-data-container">
+                    <div class="post-header">
+                        <span class="post-author">Ivan Ivanov</span>
+                        <span>&#8226;</span>
+                        <span class="post-date">0 seconds ago</span>
+                    </div>
+                    <p class="post-content">
+                        Ex eu non voluptate esse allqua velit. Nulla duis ipsum incididunt culpa laborum commodo
+                        consequat
+                        in. Nostrud elit dolor laboris tempor officia duis exercitation anim voluptate ut enim officia
+                        proident. Labore elit esse velit quis el voluptate officia laboris cillum dolor pariatur
+                        excepteur
+                        esse laborum. Veniam adipiscing quis nisi cillum voluptate veniam nuila sunt.
+                    </p>
+                    <div class="likes-dislikes-section">
+                        <button class="like-button"></button>
+                        <span class="likes-count">5</span>
+                        <button class="dislike-button"></button>
+                        <span class="dislikes-count">3</span>
+                    </div>
+                </div>
+                <div class="delete-post-anchor-container">
+                    <a href="" class="delete-post-anchor">&#x2716;</a>
+                </div>
+            </div>
+            <div id="post2" class="post-entry">
+                <div class="profile-pic-in-post-entry-container">
+                    <img src="pictures/profile_pic.png" class="profile-pic-in-post-entry">
+                </div>
+                <div class="post-data-container">
+                    <div class="post-header">
+                        <span class="post-author">Martin</span>
+                        <span>&#8226;</span>
+                        <span class="post-date">Last month</span>
+                    </div>
+                    <p class="post-content">
+                        Mollit consequat ipsum sit laboris insidunt sunt deserunt velit elit eu proident.
+                    </p>
+                    <div class="likes-dislikes-section">
+                        <button class="like-button" ></button>
+                        <span class="likes-count">3</span>
+                        <button class="dislike-button"></button>
+                        <span class="dislikes-count">0</span>
+                    </div>
+
+                </div>
+                <div class="delete-post-anchor-container">
+                    <a href="" class="delete-post-anchor">&#x2716;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
